@@ -8,6 +8,12 @@
       </h1>
     </header>
 
+    {{ if (and .Site.Params.githubBoard ) }}
+    {{ if eq .Slug "sideprojects" }} 
+      {{ partialCached "home/github-board.html" . }}
+    {{ end }}
+    {{ end }}
+
     {{ .Content }}
   </article>
 </section>
