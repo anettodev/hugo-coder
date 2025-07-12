@@ -35,5 +35,10 @@
         {{ end }}
       </ul>
     {{ end }}
+    {{ if not .Site.Params.hideColorSchemeToggle }}
+      <a id="dark-mode-toggle" class="colorscheme-toggle">
+        <i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i>
+      </a>
+    {{ end }}
   </section>
 </nav>
